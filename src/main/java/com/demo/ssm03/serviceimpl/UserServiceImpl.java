@@ -6,12 +6,14 @@ import com.demo.ssm03.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service("UserService")
 public class UserServiceImpl implements UserService {
-    //获取Mapper
-    @Autowired
+    //获取Mapper，使用Autowired报错的话可以使用Resource
+    //@Autowired
+    @Resource
     private UserMapper userMapper;
 
     @Override
